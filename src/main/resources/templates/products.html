@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Products Page</title>
+</head>
+<body>
+<ul>
+    <!-- th:each iterates over each entry in the map -->
+    <li th:each="productEntry : ${productsMap.entrySet()}">
+        <div>
+        <!-- accessing the value of the map entry -->
+        ID: <span th:text="${productEntry.key}"></span>,
+        Name: <span th:text="${productEntry.value.getName()}"></span>,
+        Price: <span th:text="${productEntry.value.getPrice()}"></span>
+        </div>
+    </li>
+</ul>
+</body>
+</html>

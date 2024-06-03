@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Hello World Page</title>
+</head>
+<body>
+<div>
+  <span th:text="${product.name}"></span>
+  <span>, </span>
+  <span>pris: </span>
+  <span th:text="${#numbers.formatCurrency(product.price)}"></span>
+</div>
+</body>
+</html>
